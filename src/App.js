@@ -67,15 +67,23 @@ function App() {
         {
           data.map((el, i) => {
 
-            const a = parseInt(el.sub1)
-            const b = parseInt(el.sub2)
-            const c = parseInt(el.sub3)
-            const total = parseInt(a + b + c)
-            const per = total / 3
-            const max = Math.max(a, b, c)
-            const min = Math.max(a, b, c)
+           var a = parseInt(el.sub1)
+            var b = parseInt(el.sub2)
+            var c = parseInt(el.sub3)
+            var total = parseInt(a + b + c)
+            var per = total / 3
+            var max = Math.max(a, b, c)
+            var min = Math.max(a, b, c)
             let grade;
-            if (per >= 90) {
+             if(a<33||b<33|c<33)
+              {
+                max="--"
+                min="--"
+                total="--"
+                per="--"
+                grade="--"
+              }
+            else if (per >= 90) {
               grade = "A+"
             }
             else if (per >= 80) {
@@ -85,6 +93,7 @@ function App() {
             else if (per >= 70) {
               grade = "C"
             }
+           
             else {
               grade = "FAIL"
             }
@@ -99,7 +108,7 @@ function App() {
                 <td>{per}</td>
                 <td>{max}</td>
                 <td>{min}</td>
-                <td style={{ backgroundColor: grade === "FAIL" ? "red" : "green" }}>{grade}</td>
+                <td style={{ backgroundColor: grade === "FAIL" ? "red" : "green"  }}>{grade}</td>
                 <td><button onClick={() => dataDelete(i)}>Delete</button></td>
                 <td><button onClick={() => dataUpdate(i)}>Update</button></td>
               </tr>
