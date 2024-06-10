@@ -49,7 +49,7 @@ function App() {
       <input type="text" value={sub2} placeholder='Subject 2' onChange={(e) => setSub2(e.target.value)} />
       <input type="text" value={sub3} placeholder='Subject 3' onChange={(e) => setSub3(e.target.value)} />
       <button onClick={dataAdd}>Add</button>
-      <table border={1} align='center' cellPadding={5}>
+      <table border={1} align='center' cellPadding={5} cellSpacing={3}>
         <thead>
           <tr>
             <th>No</th>
