@@ -1,49 +1,51 @@
 
 import { useState } from 'react';
+import Test from './Test';
 import './App.css';
+import Add from './Add';
 
 function App() {
-  let [data, setData] = useState([])
-  let [name, setName] = useState("")
-  let [sub1, setSub1] = useState("")
-  let [sub2, setSub2] = useState("")
-  let [sub3, setSub3] = useState("")
-  let [id, setId] = useState(-1)
-  let dataAdd = () => {
-    var copydata = [...data]
-    if (id >= 0) {
-      copydata.splice(id, 1, { name, sub1, sub2, sub3 })
-      setId(-1)
+  // let [data, setData] = useState([])
+  // let [name, setName] = useState("")
+  // let [sub1, setSub1] = useState("")
+  // let [sub2, setSub2] = useState("")
+  // let [sub3, setSub3] = useState("")
+  // let [id, setId] = useState(-1)
+  // let dataAdd = () => {
+  //   var copydata = [...data]
+  //   if (id >= 0) {
+  //     copydata.splice(id, 1, { name, sub1, sub2, sub3 })
+  //     setId(-1)
 
-    }
-    else {
-      copydata.push({ name, sub1, sub2, sub3 })
-    }
-    setData(copydata)
-    setName("")
-    setSub1("")
-    setSub2("")
-    setSub3("")
+  //   }
+  //   else {
+  //     copydata.push({ name, sub1, sub2, sub3 })
+  //   }
+  //   setData(copydata)
+  //   setName("")
+  //   setSub1("")
+  //   setSub2("")
+  //   setSub3("")
 
-  }
-  const dataDelete = (id) => {
-    let copydata = [...data]
-    copydata.splice(id, 1)
-    setData(copydata)
+  // }
+  // const dataDelete = (id) => {
+  //   let copydata = [...data]
+  //   copydata.splice(id, 1)
+  //   setData(copydata)
 
-  }
-  const dataUpdate = (id) => {
-    setId(id)
-    let copydata = [...data]
-    setName(copydata[id].name)
-    setSub1(copydata[id].sub1)
-    setSub2(copydata[id].sub2)
-    setSub3(copydata[id].sub3)
+  // }
+  // const dataUpdate = (id) => {
+  //   setId(id)
+  //   let copydata = [...data]
+  //   setName(copydata[id].name)
+  //   setSub1(copydata[id].sub1)
+  //   setSub2(copydata[id].sub2)
+  //   setSub3(copydata[id].sub3)
     
-  }
+  // }
   return (
     <div className="App">
-      <center>
+      {/* <center>
       <input type="text" value={name} placeholder='Enter Name' onChange={(e) => setName(e.target.value)} />
       <input type="text" value={sub1} placeholder='Subject 1' onChange={(e) => setSub1(e.target.value)} />
       <input type="text" value={sub2} placeholder='Subject 2' onChange={(e) => setSub2(e.target.value)} />
@@ -121,7 +123,9 @@ function App() {
           }
         </tbody>
       </table>
-      </center>
+      </center> */}
+      {/* <Test></Test> */}
+      <Add></Add>
     </div>
   );
 }
