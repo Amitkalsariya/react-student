@@ -25,6 +25,13 @@ const Add = () => {
         setMo("")
 
     }
+    const handleDelete =(i)=>{
+        let copy =[...data]    
+        copy.splice(i,1)
+        setData(copy)
+            
+    }
+    
   return (
     <div>
         <center>
@@ -43,6 +50,7 @@ const Add = () => {
                     <th>Surname</th>
                     <th>Age</th>
                     <th>Mo</th>
+                    <th>Delete</th>
                 </tr>
                 {
                     data.map((el,i) =>(
@@ -52,6 +60,7 @@ const Add = () => {
                             <td>{el.surname}</td>
                             <td>{el.age}</td>
                             <td>{el.mo}</td>
+                            <td><button onClick={handleDelete}>Delete</button></td>
                        </tr>
 
                     ))
