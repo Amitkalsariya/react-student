@@ -124,7 +124,7 @@ function App() {
       </table>
       </center> */}
       {/* <Test></Test> */}
-      <Add></Add>
+      {/* <Add></Add> */}
     </div>
   );
 }
